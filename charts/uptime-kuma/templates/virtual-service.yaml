@@ -7,10 +7,10 @@ spec:
   hosts:
   - "{{ .Values.subdomain }}.{{ .Values.domain }}"
   gateways:
-  - istio-ingress/mgmt-gateway
+  - "{{ .Values.gateway }}"
   http:
   - route:
     - destination:
-        host: {{ .Release.Name }}-svc.mgmt.svc.cluster.local
+        host: "{{ .Release.Name }}-svc.{{ .Release.Namespace }}.svc.cluster.local"
         port:
           number: 80

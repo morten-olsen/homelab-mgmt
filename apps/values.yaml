@@ -2,3 +2,5 @@ repo: https://github.com/morten-olsen/homelab-mgmt
 revision: main
 portainer:
   enabled: true
+uptimekuma:
+  enabled: true
